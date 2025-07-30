@@ -8,7 +8,10 @@ import {
   Settings,
   Plus,
   ChevronDown,
-  Home
+  Home,
+  ListChecks,
+  Target,
+  Zap
 } from "lucide-react"
 
 import {
@@ -28,6 +31,9 @@ import { Button } from "@/components/ui/button"
 const navigation = [
   { title: "Dashboard", url: "/", icon: LayoutDashboard },
   { title: "Projects", url: "/projects", icon: FolderKanban },
+  { title: "Backlog", url: "/backlog", icon: ListChecks },
+  { title: "Epics", url: "/epics", icon: Target },
+  { title: "Sprints", url: "/sprints", icon: Zap },
   { title: "Tasks", url: "/tasks", icon: CheckSquare },
   { title: "Team", url: "/team", icon: Users },
   { title: "Settings", url: "/settings", icon: Settings },

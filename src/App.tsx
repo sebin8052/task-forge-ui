@@ -8,6 +8,9 @@ import { AppSidebar } from "./components/layout/AppSidebar";
 import { Header } from "./components/layout/Header";
 import Dashboard from "./pages/Dashboard";
 import Projects from "./pages/Projects";
+import Backlog from "./pages/Backlog";
+import Epics from "./pages/Epics";
+import Sprints from "./pages/Sprints";
 import Tasks from "./pages/Tasks";
 import Team from "./pages/Team";
 import Settings from "./pages/Settings";
@@ -30,6 +33,9 @@ const App = () => (
                 <Routes>
                   <Route path="/" element={<Dashboard />} />
                   <Route path="/projects" element={<Projects />} />
+                  <Route path="/backlog" element={<Backlog />} />
+                  <Route path="/epics" element={<Epics />} />
+                  <Route path="/sprints" element={<Sprints />} />
                   <Route path="/tasks" element={<Tasks />} />
                   <Route path="/team" element={<Team />} />
                   <Route path="/settings" element={<Settings />} />
