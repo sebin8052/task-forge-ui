@@ -15,6 +15,13 @@ import Tasks from "./pages/Tasks";
 import Team from "./pages/Team";
 import Settings from "./pages/Settings";
 import NotFound from "./pages/NotFound";
+import UserDashboard from "./pages/UserDashboard";
+import WorkspaceDashboard from "./pages/WorkspaceDashboard";
+import ProjectView from "./pages/ProjectView";
+import EpicDetails from "./pages/EpicDetails";
+import StoryDetails from "./pages/StoryDetails";
+import SprintPlanning from "./pages/SprintPlanning";
+import KanbanBoard from "./pages/KanbanBoard";
 
 const queryClient = new QueryClient();
 
@@ -32,6 +39,13 @@ const App = () => (
               <main className="flex-1">
                 <Routes>
                   <Route path="/" element={<Dashboard />} />
+                  <Route path="/user-dashboard" element={<UserDashboard />} />
+                  <Route path="/workspace/:workspaceId" element={<WorkspaceDashboard />} />
+                  <Route path="/workspace/:workspaceId/project/:projectId" element={<ProjectView />} />
+                  <Route path="/workspace/:workspaceId/project/:projectId/epic/:epicId" element={<EpicDetails />} />
+                  <Route path="/workspace/:workspaceId/project/:projectId/story/:storyId" element={<StoryDetails />} />
+                  <Route path="/workspace/:workspaceId/project/:projectId/sprint-planning" element={<SprintPlanning />} />
+                  <Route path="/workspace/:workspaceId/project/:projectId/kanban" element={<KanbanBoard />} />
                   <Route path="/projects" element={<Projects />} />
                   <Route path="/backlog" element={<Backlog />} />
                   <Route path="/epics" element={<Epics />} />
